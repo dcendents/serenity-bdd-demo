@@ -27,18 +27,19 @@ import net.thucydides.core.annotations.Narrative;
 import net.thucydides.core.annotations.Steps;
 
 @Narrative(text = { "As an employer, I want to maximise the return on every contract. ",
-		"Employees performance should be kept at the minimum acceptable level." })
+		"To slow down clever employees, block access to useful sites ",
+		"and use some generic excuse."})
 @RunWith(SerenityRunner.class)
 public class BlockProductivityIT {
 
 	private Actor james = Actor.named("James");
-	
+
 	@Managed(driver = "chrome", uniqueSession = true)
 	WebDriver hisBrowser;
 
 	@Steps
 	OpenGoogle openGoogle;
-	
+
 	@Steps
 	TheDisplayedPage theDisplayedPage;
 
@@ -48,14 +49,14 @@ public class BlockProductivityIT {
     }
 
     @Test
-	public void all_access_to_productivity_tools_must_be_blocked() {
+	public void access_to_random_useful_sites_must_be_blocked() {
     	givenThat(james).wasAbleTo(openGoogle);
-    	andThat(james).wasAbleTo(PerformSearch.of("Productivity Tools News & Topics - Entrepreneur"));
+    	andThat(james).wasAbleTo(PerformSearch.of("wsimport - with a proxy | Jeannot's Weblog", "site:jeannotsweblog.blogspot.co.uk"));
 
-        when(james).attemptsTo(Open.theLink("Productivity Tools News & Topics - Entrepreneur"));
+        when(james).attemptsTo(Open.theLink("wsimport - with a proxy | Jeannot's Weblog"));
 
-        then(james).should(seeThat(theDisplayedPage, containsText("BLOCKED")));
-        and(james).should(seeThat(theDisplayedPage, containsText("Productivity Tools")));
+        then(james).should(seeThat(theDisplayedPage, containsText("Access Denied")));
+        and(james).should(seeThat(theDisplayedPage, containsText("categorization: \"Personal Sites\"")));
 	}
 
 	@BeforeClass

@@ -5,17 +5,17 @@
 	<artifactId>serenity-bdd-demo</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>SerenityBDD Demo</name>
-	
+
 	<url>https://github.com/dcendents/serenity-bdd-demo</url>
 	<inceptionYear>2017</inceptionYear>
-	
+
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
 		</license>
 	</licenses>
-	
+
 	<scm>
 		<connection>scm:git:https://github.com/dcendents/serenity-bdd-demo.git</connection>
 		<url>https://github.com/dcendents/serenity-bdd-demo</url>
@@ -28,13 +28,13 @@
 			<email>dcendents@gmail.com</email>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- <webdriver.driver>chrome</webdriver.driver> -->
 		<serenity.version>1.4.0</serenity.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -85,7 +85,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -96,6 +96,26 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>add-test-source</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>add-test-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.basedir}/src/test/java2</source>
+								<source>${project.basedir}/src/test/java3</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -130,14 +150,8 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!-- <includes> -->
-					<!-- <include>**/features/**/When*.java</include> -->
-					<!-- </includes> -->
 					<systemProperties>
 						<webdriver.chrome.driver>${user.home}/.m2/repository/webdriver/chromedriver/win32/2.29/chromedriver.exe</webdriver.chrome.driver>
-						<!-- <webdriver.driver>${webdriver.driver}</webdriver.driver> -->
-						<!-- <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount> -->
-						<!-- <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount> -->
 					</systemProperties>
 				</configuration>
 			</plugin>
@@ -174,48 +188,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>m2e</id>
-			<activation>
-				<property>
-					<name>m2e.version</name>
-				</property>
-			</activation>
-			<build>
-				<directory>target-eclipse</directory>
-				<pluginManagement>
-					<plugins>
-						<!--This plugin's configuration is used to store Eclipse m2e settings 
-							only. It has no influence on the Maven build itself. -->
-						<plugin>
-							<groupId>org.eclipse.m2e</groupId>
-							<artifactId>lifecycle-mapping</artifactId>
-							<version>1.0.0</version>
-							<configuration>
-								<lifecycleMappingMetadata>
-									<pluginExecutions>
-										<pluginExecution>
-											<pluginExecutionFilter>
-												<groupId>org.jacoco</groupId>
-												<artifactId>jacoco-maven-plugin</artifactId>
-												<versionRange>[0.7.4.201502262128,)</versionRange>
-												<goals>
-													<goal>prepare-agent</goal>
-												</goals>
-											</pluginExecutionFilter>
-											<action>
-												<ignore />
-											</action>
-										</pluginExecution>
-									</pluginExecutions>
-								</lifecycleMappingMetadata>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-	</profiles>
 </project>

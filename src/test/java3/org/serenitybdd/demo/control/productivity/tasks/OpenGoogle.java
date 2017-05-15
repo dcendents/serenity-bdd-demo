@@ -9,13 +9,10 @@ import net.thucydides.core.annotations.Step;
 
 public class OpenGoogle implements Task {
 
-	public OpenGoogle() {
-	}
-
 	@Override
 	@Step("{0} opens the google page")
 	public <T extends Actor> void performAs(T actor) {
-		BrowseTheWeb.as(actor).openAt(GooglePage.URL);
+		BrowseTheWeb.as(actor).onPage(GooglePage.class).open();
 	}
 
 }

@@ -34,15 +34,16 @@ public class WhenFoolingAroundIT {
 		new WebDriverWait(driver, 5).until(titleContains("Google Search"));
 
 		then(driver.findElement(By.linkText("Pipotron")).isDisplayed()).isTrue();
-		
+
 		driver.findElement(By.linkText("Pipotron")).click();
-		
-		then(driver.getTitle()).isEqualTo("BLOCKED BY PROXY");
+
+		then(driver.getTitle()).contains("Access denied");
+		then(driver.findElement(By.cssSelector("body")).getText()).contains("categorization: \"Humor/Jokes\"");
 	}
-	
+
 	@BeforeClass
 	public static void setupClass() {
 		ChromeDriverManager.getInstance().setup();
 	}
-	
+
 }

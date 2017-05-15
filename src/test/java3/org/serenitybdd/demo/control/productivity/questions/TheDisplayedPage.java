@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.targets.Target;
 public class TheDisplayedPage extends WebElementQuestion {
 
 	public TheDisplayedPage() {
-		super(Target.the("text").located(By.tagName("body")));
+		super(Target.the("page text").located(By.tagName("body")));
 	}
 
 }

@@ -5,7 +5,6 @@ import org.serenitybdd.demo.control.banter.pages.ProxyBlockedPage;
 
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.BlurScreenshots;
-import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.screenshots.BlurLevel;
@@ -37,9 +36,9 @@ public class EmployeeSteps extends ScenarioSteps {
     }
 
     @Step
-    @Pending
     public void should_be_reminded_site_is_blocked(String category) {
-    	onProxyPage();
+    	onProxyPage().titleShouldContain("Access denied");
+    	onProxyPage().bodyShouldContain("categorization: \"Humor/Jokes\"");
     }
 
     @Step
