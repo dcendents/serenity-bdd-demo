@@ -5,19 +5,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.serenitybdd.demo.control.banter.steps.EmployeeSteps;
+import org.serenitybdd.demo.control.fooling.WhenFoolingAroundIT;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
-import net.thucydides.core.annotations.Narrative;
 import net.thucydides.core.annotations.Screenshots;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
 
-@Narrative(text = { "As a serious employer, ",
-		"I want my employees to be visually reminded whenever we detect they are fooling around. ",
-		"I won’t tolerate banter or harmless prank jokes either." })
+@Story(WhenFoolingAroundIT.class)
 @RunWith(SerenityRunner.class)
 public class NoBanterAllowedIT {
 

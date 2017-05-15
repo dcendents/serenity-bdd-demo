@@ -49,6 +49,7 @@ public class BlockProductivityIT {
     }
 
     @Test
+	@Issue("#25788")
 	public void access_to_random_useful_sites_must_be_blocked() {
     	givenThat(james).wasAbleTo(openGoogle);
     	andThat(james).wasAbleTo(PerformSearch.of("wsimport - with a proxy | Jeannot's Weblog", "site:jeannotsweblog.blogspot.co.uk"));
