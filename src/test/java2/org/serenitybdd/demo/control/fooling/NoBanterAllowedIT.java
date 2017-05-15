@@ -9,12 +9,14 @@ import org.serenitybdd.demo.control.fooling.WhenFoolingAroundIT;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import net.serenitybdd.junit.runners.SerenityRunner;
+import net.thucydides.core.annotations.BlurScreenshots;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Screenshots;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
+import net.thucydides.core.screenshots.BlurLevel;
 
 @Story(WhenFoolingAroundIT.class)
 @RunWith(SerenityRunner.class)
@@ -31,6 +33,7 @@ public class NoBanterAllowedIT {
 
 	@Test
 	@Screenshots(beforeAndAfterEachStep = true)
+	@BlurScreenshots(BlurLevel.HEAVY)
 	public void rickrolling_is_forbidden() {
 		employee.opens_the_search_page();
 		employee.searches_for("Let's Rickroll!");

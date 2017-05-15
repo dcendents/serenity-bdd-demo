@@ -4,10 +4,8 @@ import org.serenitybdd.demo.control.fooling.pages.GooglePage;
 import org.serenitybdd.demo.control.fooling.pages.ProxyBlockedPage;
 
 import net.serenitybdd.core.Serenity;
-import net.thucydides.core.annotations.BlurScreenshots;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
-import net.thucydides.core.screenshots.BlurLevel;
 import net.thucydides.core.steps.ScenarioSteps;
 
 @SuppressWarnings("serial")
@@ -23,13 +21,11 @@ public class EmployeeSteps extends ScenarioSteps {
     }
 
     @Step
-    @BlurScreenshots(BlurLevel.HEAVY)
     public void searches_for(String search_terms) {
         onSearchPage().searchFor(search_terms);
     }
 
     @Step
-    @BlurScreenshots(BlurLevel.LIGHT)
     public void dares_to_open_page(String linkName) {
     	takes_a_screenshot();
     	onSearchPage().clickOn(linkName);
