@@ -31,7 +31,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- <webdriver.driver>chrome</webdriver.driver> -->
 		<serenity.version>1.4.0</serenity.version>
 	</properties>
 
@@ -150,11 +149,6 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<systemProperties>
-						<webdriver.chrome.driver>${user.home}/.m2/repository/webdriver/chromedriver/win32/2.29/chromedriver.exe</webdriver.chrome.driver>
-					</systemProperties>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>net.serenity-bdd.maven.plugins</groupId>

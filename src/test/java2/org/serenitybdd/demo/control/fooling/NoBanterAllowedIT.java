@@ -22,7 +22,7 @@ import net.thucydides.core.screenshots.BlurLevel;
 @RunWith(SerenityRunner.class)
 public class NoBanterAllowedIT {
 
-	@Managed(driver = "chrome", uniqueSession = true)
+	@Managed(uniqueSession = true)
 	WebDriver driver;
 
 	@ManagedPages

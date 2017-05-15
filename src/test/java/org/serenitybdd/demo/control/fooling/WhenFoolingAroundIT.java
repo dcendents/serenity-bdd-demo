@@ -22,7 +22,7 @@ import net.thucydides.core.annotations.Narrative;
 @RunWith(SerenityRunner.class)
 public class WhenFoolingAroundIT {
 
-	@Managed(driver = "chrome", uniqueSession = true)
+	@Managed(uniqueSession = true)
 	WebDriver driver;
 
 	@Test
