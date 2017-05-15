@@ -17,7 +17,8 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Narrative;
 
 @Narrative(text = { "As a serious employer, ",
-		"I want my employees to be visually reminded whenever we detect they are fooling around." })
+		"I want my employees to be visually reminded whenever we detect they are fooling around. ",
+		"I won’t tolerate banter or harmless prank jokes either." })
 @RunWith(SerenityRunner.class)
 public class WhenFoolingAroundIT {
 

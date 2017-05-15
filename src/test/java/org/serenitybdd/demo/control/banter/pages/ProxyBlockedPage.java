@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.banter;
+package org.serenitybdd.demo.control.banter.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

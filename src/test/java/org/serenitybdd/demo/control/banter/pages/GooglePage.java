@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.banter;
+package org.serenitybdd.demo.control.banter.pages;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleContains;
 
@@ -25,11 +25,11 @@ public class GooglePage extends PageObject {
     public void searchFor(String keywords) {
         search.sendKeys(keywords, Keys.ENTER);
         waitFor(titleContains("Google Search"));
-        waitForRenderedElementsToBePresent(By.linkText("Let's Rickroll!"));
+        waitForRenderedElementsToBePresent(By.linkText(keywords));
     }
 
     public void clickOn(String keywords) {
-    	WebElementFacade link = find(By.linkText("Let's Rickroll!"));
+    	WebElementFacade link = find(By.linkText(keywords));
     	link.shouldBeVisible();
     	link.click();
     }

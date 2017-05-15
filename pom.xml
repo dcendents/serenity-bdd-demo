@@ -5,14 +5,17 @@
 	<artifactId>serenity-bdd-demo</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>SerenityBDD Demo</name>
+	
 	<url>https://github.com/dcendents/serenity-bdd-demo</url>
 	<inceptionYear>2017</inceptionYear>
+	
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
 		</license>
 	</licenses>
+	
 	<scm>
 		<connection>scm:git:https://github.com/dcendents/serenity-bdd-demo.git</connection>
 		<url>https://github.com/dcendents/serenity-bdd-demo</url>
@@ -25,11 +28,64 @@
 			<email>dcendents@gmail.com</email>
 		</developer>
 	</developers>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!-- 		<webdriver.driver>chrome</webdriver.driver> -->
+		<!-- <webdriver.driver>chrome</webdriver.driver> -->
 		<serenity.version>1.4.0</serenity.version>
 	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.16</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-screenplay</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-screenplay-webdriver</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-junit</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>1.6.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.7.0</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -79,7 +135,7 @@
 					<!-- </includes> -->
 					<systemProperties>
 						<webdriver.chrome.driver>${user.home}/.m2/repository/webdriver/chromedriver/win32/2.29/chromedriver.exe</webdriver.chrome.driver>
-<!-- 						<webdriver.driver>${webdriver.driver}</webdriver.driver> -->
+						<!-- <webdriver.driver>${webdriver.driver}</webdriver.driver> -->
 						<!-- <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount> -->
 						<!-- <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount> -->
 					</systemProperties>
@@ -95,6 +151,16 @@
 						<artifactId>serenity-core</artifactId>
 						<version>${serenity.version}</version>
 					</dependency>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-screenplay</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-screenplay-webdriver</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
 				</dependencies>
 				<executions>
 					<execution>
@@ -108,44 +174,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.16</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.serenity-bdd</groupId>
-			<artifactId>serenity-core</artifactId>
-			<version>${serenity.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.serenity-bdd</groupId>
-			<artifactId>serenity-junit</artifactId>
-			<version>${serenity.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>1.6.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
-			<version>3.7.0</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+
 	<profiles>
 		<profile>
 			<id>m2e</id>
