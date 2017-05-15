@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.productivity.tasks;
+package org.serenitybdd.demo.money.productivity.tasks;
 
 
 import net.serenitybdd.core.annotations.findby.By;

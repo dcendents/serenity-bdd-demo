@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.banter.pages;
+package org.serenitybdd.demo.control.fooling.pages;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleContains;
 
@@ -17,7 +17,7 @@ public class GooglePage extends PageObject {
 
     @FindBy(name="q")
     WebElement search;
-    
+
     public GooglePage(WebDriver driver) {
         super(driver);
     }

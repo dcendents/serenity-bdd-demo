@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.productivity;
+package org.serenitybdd.demo.money.productivity;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.and;
 import static net.serenitybdd.screenplay.GivenWhenThen.andThat;
@@ -13,10 +13,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import org.serenitybdd.demo.control.productivity.questions.TheDisplayedPage;
-import org.serenitybdd.demo.control.productivity.tasks.Open;
-import org.serenitybdd.demo.control.productivity.tasks.OpenGoogle;
-import org.serenitybdd.demo.control.productivity.tasks.PerformSearch;
+import org.serenitybdd.demo.money.productivity.questions.TheDisplayedPage;
+import org.serenitybdd.demo.money.productivity.tasks.Open;
+import org.serenitybdd.demo.money.productivity.tasks.OpenGoogle;
+import org.serenitybdd.demo.money.productivity.tasks.PerformSearch;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import net.serenitybdd.junit.runners.SerenityRunner;

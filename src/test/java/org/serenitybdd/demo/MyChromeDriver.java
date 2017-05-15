@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control;
+package org.serenitybdd.demo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

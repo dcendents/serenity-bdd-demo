@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.productivity.questions;
+package org.serenitybdd.demo.money.productivity.questions;
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.questions.WebElementQuestion;

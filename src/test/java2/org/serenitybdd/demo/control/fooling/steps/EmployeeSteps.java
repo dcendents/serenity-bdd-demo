@@ -1,7 +1,7 @@
-package org.serenitybdd.demo.control.banter.steps;
+package org.serenitybdd.demo.control.fooling.steps;
 
-import org.serenitybdd.demo.control.banter.pages.GooglePage;
-import org.serenitybdd.demo.control.banter.pages.ProxyBlockedPage;
+import org.serenitybdd.demo.control.fooling.pages.GooglePage;
+import org.serenitybdd.demo.control.fooling.pages.ProxyBlockedPage;
 
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.BlurScreenshots;

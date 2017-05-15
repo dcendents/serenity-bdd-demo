@@ -1,10 +1,10 @@
-package org.serenitybdd.demo.control.banter;
+package org.serenitybdd.demo.control.fooling;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import org.serenitybdd.demo.control.banter.steps.EmployeeSteps;
+import org.serenitybdd.demo.control.fooling.steps.EmployeeSteps;
 import org.serenitybdd.demo.control.fooling.WhenFoolingAroundIT;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;

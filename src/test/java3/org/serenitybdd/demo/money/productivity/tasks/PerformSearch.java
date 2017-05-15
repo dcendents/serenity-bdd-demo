@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.productivity.tasks;
+package org.serenitybdd.demo.money.productivity.tasks;
 
 
 import static org.openqa.selenium.Keys.RETURN;
@@ -6,7 +6,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.titleContains;
 
 import java.util.List;
 
-import org.serenitybdd.demo.control.productivity.pages.GooglePage;
+import org.serenitybdd.demo.money.productivity.pages.GooglePage;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;

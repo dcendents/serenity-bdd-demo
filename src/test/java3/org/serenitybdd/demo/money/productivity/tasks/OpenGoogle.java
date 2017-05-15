@@ -1,6 +1,6 @@
-package org.serenitybdd.demo.control.productivity.tasks;
+package org.serenitybdd.demo.money.productivity.tasks;
 
-import org.serenitybdd.demo.control.productivity.pages.GooglePage;
+import org.serenitybdd.demo.money.productivity.pages.GooglePage;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

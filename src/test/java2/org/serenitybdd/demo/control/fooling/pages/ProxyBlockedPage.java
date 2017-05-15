@@ -1,4 +1,4 @@
-package org.serenitybdd.demo.control.banter.pages;
+package org.serenitybdd.demo.control.fooling.pages;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
