@@ -11,11 +11,9 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.BlurScreenshots;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Screenshots;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Story;
-import net.thucydides.core.pages.Pages;
 import net.thucydides.core.screenshots.BlurLevel;
 
 @Story(WhenFoolingAroundIT.class)
@@ -24,9 +22,6 @@ public class NoBanterAllowedIT {
 
 	@Managed
 	WebDriver driver;
-
-	@ManagedPages
-	Pages pages;
 
 	@Steps
 	public EmployeeSteps employee;
