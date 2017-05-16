@@ -35,7 +35,7 @@ public class BlockProductivityIT {
 
 	private Actor james = Actor.named("James");
 
-	@Managed(uniqueSession = true)
+	@Managed
 	WebDriver hisBrowser;
 
 	@Steps

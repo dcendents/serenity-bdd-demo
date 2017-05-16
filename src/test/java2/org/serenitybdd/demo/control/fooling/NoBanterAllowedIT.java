@@ -22,7 +22,7 @@ import net.thucydides.core.screenshots.BlurLevel;
 @RunWith(SerenityRunner.class)
 public class NoBanterAllowedIT {
 
-	@Managed(uniqueSession = true)
+	@Managed
 	WebDriver driver;
 
 	@ManagedPages
@@ -38,7 +38,7 @@ public class NoBanterAllowedIT {
 		employee.opens_the_search_page();
 		employee.searches_for("Let's Rickroll!");
 		employee.dares_to_open_page("Let's Rickroll!");
-		employee.should_be_reminded_site_is_blocked("Humor");
+		employee.should_be_reminded_site_is_blocked("Humor/Jokes");
 	}
 
 	@BeforeClass

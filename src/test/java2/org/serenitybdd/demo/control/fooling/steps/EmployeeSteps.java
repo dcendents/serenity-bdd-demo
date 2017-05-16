@@ -27,19 +27,16 @@ public class EmployeeSteps extends ScenarioSteps {
 
     @Step
     public void dares_to_open_page(String linkName) {
-    	takes_a_screenshot();
+    	
+Serenity.takeScreenshot();
+
     	onSearchPage().clickOn(linkName);
     }
 
     @Step
     public void should_be_reminded_site_is_blocked(String category) {
     	onProxyPage().titleShouldContain("Access denied");
-    	onProxyPage().bodyShouldContain("categorization: \"Humor/Jokes\"");
-    }
-
-    @Step
-    public void takes_a_screenshot() {
-    	Serenity.takeScreenshot();
+    	onProxyPage().bodyShouldContain("categorization: \"" + category + "\"");
     }
 
     private GooglePage onSearchPage() {

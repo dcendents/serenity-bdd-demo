@@ -22,11 +22,11 @@ import net.thucydides.core.annotations.Narrative;
 @RunWith(SerenityRunner.class)
 public class WhenFoolingAroundIT {
 
-	@Managed(uniqueSession = true)
+	@Managed
 	WebDriver driver;
 
 	@Test
-	public void pipotron_is_definitely_out_of_bounds() {
+	public void pipotron_is_out_of_bounds() {
 		driver.get("http://www.google.com");
 
 		driver.findElement(By.name("q")).sendKeys("pipotron", Keys.ENTER);
