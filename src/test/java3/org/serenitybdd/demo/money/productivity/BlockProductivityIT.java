@@ -58,7 +58,7 @@ public class BlockProductivityIT {
         when(james).attemptsTo(Open.theLink("wsimport - with a proxy | Jeannot's Weblog"));
 
         then(james).should(seeThat(theDisplayedPage, containsText("Access Denied")));
-        and(james).should(seeThat(theDisplayedPage, containsText("categorization: \"Personal Sites\"")));
+        and(james).should(seeThat(theDisplayedPage, containsText("categorization: \"Personal Sites")));
 	}
 
 	@BeforeClass
